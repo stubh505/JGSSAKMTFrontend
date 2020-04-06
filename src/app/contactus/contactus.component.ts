@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { ContactUsService } from './contactus.service';
 import { faPhone, faMobile, faMapPin, faMailBulk } from '@fortawesome/free-solid-svg-icons';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-contactus',
@@ -18,7 +19,9 @@ export class ContactusComponent implements OnInit {
   successMessage: any;
   contactUsForm: FormGroup;
   
-  constructor(private fb:FormBuilder, private service:ContactUsService) { }
+  constructor(private fb:FormBuilder, private service:ContactUsService, private titleService:Title) { 
+    this.titleService.setTitle("Contact Us");
+  }
 
   ngOnInit() : void {
     this.contactUsForm=this.fb.group({
@@ -30,13 +33,13 @@ export class ContactusComponent implements OnInit {
   }
 
   contactUs() {
-    alert(JSON.stringify(this.contactUsForm.value));
     this.errorMessage=null;
     this.successMessage=null;
     this.service.contactUs(this.contactUsForm.value).subscribe(
       response=>{this.successMessage=response.message},
       error=>{this.errorMessage=error.error.message}
-    )
+    );
+    this.contactUsForm.reset();
   }
 
 }

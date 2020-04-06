@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -13,6 +13,7 @@ import { BlogsComponent } from './blogs/blogs.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { ContactUsService } from './contactus/contactus.service';
 import { HttpClientModule } from '@angular/common/http';
+import { AboutService } from './about/about.service';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,11 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     FontAwesomeModule
   ],
-  providers: [ ContactUsService ],
+  providers: [ 
+    ContactUsService,
+    AboutService,
+    Title
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
