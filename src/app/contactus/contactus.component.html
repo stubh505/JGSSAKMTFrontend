@@ -1,1 +1,67 @@
-<p>contactus works!</p>
+<div class="row vertical-center">
+    <div class="col-md-5 offset-md-1 col-xs-10 offset-xs-1 col-sm-10 offset-sm-1">
+      <div class="card">
+        <div class="card-header bg-dark">
+          <label><b class="text-light">Contact Us</b></label>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="contactUsForm" (ngSubmit)="contactUs()">
+            <div class="form-group">
+            <label><b>Name:</b></label><br>
+              <input type="text"  formControlName="name" class="form-control">
+            </div>
+            <div class="form-group">
+              <label><b>Email Id:</b></label>
+              <input type="email" formControlName="email" class="form-control">
+              <span id="noOfTicketError" class="text-danger"
+              *ngIf="contactUsForm.controls.email.invalid && contactUsForm.controls.email.dirty">
+                Enter proper email id
+              </span>
+            </div>
+            <div class="form-group">
+              <label><b>Mobile Number:</b></label>
+              <input type="number" formControlName="mobile" class="form-control">
+              <span id="dateOfConcertError" class="text-danger"
+              *ngIf="contactUsForm.controls.mobile.invalid && contactUsForm.controls.mobile.dirty">
+                Enter proper mobile number
+              </span>
+            </div>
+            <div class="form-group">
+                <label><b>Message:</b></label>
+                <textarea type="text" formControlName="message" class="form-control"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="contactUsForm.invalid || contactUsForm.pristine">
+              Send Message
+            </button>
+          </form>
+  
+          <div *ngIf="errorMessage!=null">
+            <span class="text-danger">{{errorMessage}}</span>
+          </div>
+          <div *ngIf="successMessage!=null">
+            <span class="text-success">{{successMessage}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5 col-xs-10 col-sm-10">
+      <h3>Address</h3>
+      <p>
+        Joy guru Sree Sree Ashok Kumar Mukhopadhyay Sevakendra
+        Religious & Charitable Trust
+        Devoted to Sri Sri Ashok Kumar Mukhopadhyay
+      </p>
+      <p class="text-sm"><fa-icon [icon]="faMapPin"></fa-icon>&nbsp;11 Roy MC Lahiri Street, Chatra, Srirampur Dist. Hooghly, West Bengal, India.</p>
+      
+      <p><fa-icon [icon]="faMailBulk"></fa-icon>&nbsp;<a href="mailto:joygurutrust2004@gmail.com">joygurutrust2004@gmail.com</a></p>
+      
+      <p><fa-icon [icon]="faPhone"></fa-icon>&nbsp;<a href="tel:+91 33 26523285">+91 33 26523285</a></p>
+      
+      <p><fa-icon [icon]="faMobile"></fa-icon>&nbsp;<a href="tel:+91 98048 23652">+91 98048 23652</a>, <a href="tel:+91 94330 12740">+91 94330 12740</a></p>
+
+      <h3>Locate Us</h3>
+      <div class="card"><iframe class="container-fluid card-body" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.1732745786057!2d88.33414061479566!3d22.758949985087224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89ad974bad5e7%3A0xc32f48908eedecd5!2sJoy%20Guru%20Sri%20Sri%20Ashok%20Kumar%20Mukhopadhyay%20Sevakendra%20Trust!5e0!3m2!1sen!2sin!4v1586108974709!5m2!1sen!2sin" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
+    
+    </div>
+</div>
+  
