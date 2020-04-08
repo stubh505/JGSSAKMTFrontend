@@ -14,6 +14,8 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { ContactUsService } from './contactus/contactus.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AboutService } from './about/about.service';
+import { BlogsService } from './blogs/blogs.service';
+import { ViewBlogComponent } from './view-blog/view-blog.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { AboutService } from './about/about.service';
     AboutComponent,
     EventsComponent,
     BlogsComponent,
-    ContactusComponent
+    ContactusComponent,
+    ViewBlogComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +40,7 @@ import { AboutService } from './about/about.service';
   providers: [ 
     ContactUsService,
     AboutService,
+    BlogsService,
     Title
   ],
   bootstrap: [AppComponent]

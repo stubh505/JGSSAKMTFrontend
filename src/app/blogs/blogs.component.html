@@ -1,1 +1,17 @@
-<p>blogs works!</p>
+<div class="container-fluid">
+<div class="card-deck" style="margin-top: 100px; margin-bottom: 100px;">
+    <div class="col-md-4" *ngFor="let b of blogs">
+        <div class="card" style="width:400px; margin: 0 auto;  margin-top: 10px; margin-bottom: 10px;">
+            <img class="card-img-top" [src]="b.imgUrl" [alt]="b.title">
+            <div class="card-body">
+              <h3 class="card-title">{{b.title}}</h3>
+              <p class="card-text">{{b.excerpt}}</p>
+              <button (click)="link(b.blogId)" class="btn btn-primary">Read More</button>
+            </div>
+            <div class="card-footer">
+                Posted : {{b.posted}}
+            </div>
+          </div>
+    </div>
+</div>
+</div>

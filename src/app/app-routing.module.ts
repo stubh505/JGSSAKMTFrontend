@@ -5,12 +5,14 @@ import { AboutComponent } from './about/about.component';
 import { BlogsComponent } from './blogs/blogs.component';
 import { EventsComponent } from './events/events.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { ViewBlogComponent } from './view-blog/view-blog.component';
 
 
 const routes: Routes = [
   { path : 'home', component : HomeComponent },
   { path : 'about', component : AboutComponent },
   { path : 'blogs', component : BlogsComponent },
+  { path : 'blogs/:id', component : ViewBlogComponent },
   { path : 'events', component : EventsComponent },
   { path : 'contactus', component : ContactusComponent},
 
