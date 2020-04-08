@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BlogsService } from '../blogs/blogs.service';
 import { Blogs } from '../models/blogs';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-view-blog',
@@ -13,7 +14,9 @@ export class ViewBlogComponent implements OnInit {
   blog:Blogs;
   errorMessage:string;
 
-  constructor(private route:ActivatedRoute, private service:BlogsService) { }
+  constructor(private route:ActivatedRoute, private service:BlogsService, private title:Title) { 
+    title.setTitle("Blog");
+  }
 
   ngOnInit(): void {
     this.route.params.subscribe(

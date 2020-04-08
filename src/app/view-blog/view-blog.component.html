@@ -1,13 +1,19 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-10 offset-md-1">
-            <div style="margin-top: 100px; margin-bottom: 100px;">
-                <h2>{{blog.title}}</h2>
+        <div class="col-md-7 offset-md-1">
+            <div style="margin-top: 100px; margin-bottom: 100px; text-align: justify;">
                 <div>
-                    <span><img [src]="blog.imgUrl" class="img img-fluid rounded"></span>
-                    <span [innerHTML]="blog.content">
-                        
-                    </span>
+                    <h2>{{blog.title}}</h2>
+                </div>
+                <div class="text-right" style="float: right;">
+                    <div style="font-size: x-small;"><b>Posted : {{blog.posted}}</b></div>
+                    <div style="font-size: x-small;" *ngIf="blog.posted != blog.edited"><b>Edited : {{blog.edited}}</b></div>
+                </div>
+                <div>
+                    <div>
+                        <img [src]="blog.imgUrl" class="img img-fluid rounded" style="width: 100%; margin-top: 20px; margin-bottom: 20px;">
+                    </div>
+                    <div [innerHTML]="blog.content"></div>
                 </div>
             </div>
         </div>
