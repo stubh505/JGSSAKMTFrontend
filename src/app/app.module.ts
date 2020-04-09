@@ -16,6 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AboutService } from './about/about.service';
 import { BlogsService } from './blogs/blogs.service';
 import { ViewBlogComponent } from './view-blog/view-blog.component';
+import { SidePanelComponent } from './side-panel/side-panel.component';
+import { EventsService } from './events/events.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { ViewBlogComponent } from './view-blog/view-blog.component';
     EventsComponent,
     BlogsComponent,
     ContactusComponent,
-    ViewBlogComponent
+    ViewBlogComponent,
+    SidePanelComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +44,7 @@ import { ViewBlogComponent } from './view-blog/view-blog.component';
     ContactUsService,
     AboutService,
     BlogsService,
+    EventsService,
     Title
   ],
   bootstrap: [AppComponent]

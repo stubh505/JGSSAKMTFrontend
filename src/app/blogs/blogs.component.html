@@ -1,7 +1,7 @@
 <div class="container-fluid">
 <div class="card-deck" style="margin-top: 100px; margin-bottom: 100px;">
-    <div class="col-md-4" *ngFor="let b of blogs">
-        <div class="card" style="width:400px; margin: 0 auto;  margin-top: 10px; margin-bottom: 10px;">
+    <div class="col-md-5 offset-md-1" *ngFor="let b of blogs">
+        <div class="card" style="width: auto; margin: 0 auto;  margin-top: 10px; margin-bottom: 10px;">
             <img class="card-img-top" [src]="b.imgUrl" [alt]="b.title">
             <div class="card-body">
               <h3 class="card-title">{{b.title}}</h3>
