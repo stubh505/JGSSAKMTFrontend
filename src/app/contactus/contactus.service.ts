@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { ContactUs } from '../models/contactus';
+import { environment } from 'src/environments/environment';
 
 @Injectable()
 export class ContactUsService {
@@ -10,7 +11,7 @@ export class ContactUsService {
   constructor(private http:HttpClient) { }
 
   contactUs(data: ContactUs):Observable<ContactUs> {
-    return this.http.post<ContactUs>("http://localhost:8080/app-0.0.1-SNAPSHOT/ContactUsAPI/contactUs", data);
+    return this.http.post<ContactUs>(environment.contactapi+"contactUs", data);
   }
 
   private errorHandler(err:any){
