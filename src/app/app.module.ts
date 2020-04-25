@@ -18,6 +18,8 @@ import { BlogsService } from './blogs/blogs.service';
 import { ViewBlogComponent } from './view-blog/view-blog.component';
 import { SidePanelComponent } from './side-panel/side-panel.component';
 import { EventsService } from './events/events.service';
+import { EventDatePipe } from './pipe.date';
+import { ViewEventComponent } from './view-event/view-event.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { EventsService } from './events/events.service';
     BlogsComponent,
     ContactusComponent,
     ViewBlogComponent,
-    SidePanelComponent
+    SidePanelComponent,
+    EventDatePipe,
+    ViewEventComponent
   ],
   imports: [
     BrowserModule,

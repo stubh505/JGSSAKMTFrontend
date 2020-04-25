@@ -6,6 +6,7 @@ import { BlogsComponent } from './blogs/blogs.component';
 import { EventsComponent } from './events/events.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { ViewBlogComponent } from './view-blog/view-blog.component';
+import { ViewEventComponent } from './view-event/view-event.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path : 'blogs', component : BlogsComponent },
   { path : 'blogs/:id', component : ViewBlogComponent },
   { path : 'events', component : EventsComponent },
+  { path : 'events/:id', component : ViewEventComponent },
   { path : 'contactus', component : ContactusComponent},
 
   { path: '', component : HomeComponent },
