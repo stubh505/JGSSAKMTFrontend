@@ -8,7 +8,7 @@ import { Title } from '@angular/platform-browser';
   selector: 'app-contactus',
   templateUrl: './contactus.component.html',
   styleUrls: ['./contactus.component.css']
-})
+}) 
 
 export class ContactusComponent implements OnInit {
   faPhone = faPhone;

@@ -28,7 +28,7 @@ export class ViewBlogComponent implements OnInit {
   view() {
     this.service.view(this.blogId).subscribe(
       (response)=>{ this.blog=response },
-      (error)=>{ this.errorMessage=error.error.message }
+      (error)=>{ this.errorMessage=error.error.message } 
     )
   }
 }

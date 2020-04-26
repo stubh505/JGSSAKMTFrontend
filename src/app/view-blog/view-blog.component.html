@@ -6,8 +6,8 @@
                     <h2>{{blog.title}}</h2>
                 </div>
                 <div class="text-right" style="float: right;">
-                    <div style="font-size: x-small;"><b>Posted : {{blog.posted}}</b></div>
-                    <div style="font-size: x-small;" *ngIf="blog.posted != blog.edited"><b>Edited : {{blog.edited}}</b></div>
+                    <div style="font-size: x-small;"><b>Posted : {{blog.posted | date}}</b></div>
+                    <div style="font-size: x-small;" *ngIf="blog.posted != blog.edited"><b>Edited : {{blog.edited | date}}</b></div>
                 </div>
                 <div>
                     <div>

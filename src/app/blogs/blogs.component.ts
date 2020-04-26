@@ -21,7 +21,7 @@ export class BlogsComponent implements OnInit {
     this.viewAll();
   }
 
-  viewAll() {
+  viewAll() { 
     this.service.viewAll().subscribe(
       (response)=>{ this.blogs=response },
       (error)=>{ this.errorMessage=error.error.message }

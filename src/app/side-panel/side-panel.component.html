@@ -1,4 +1,4 @@
-<div class="container" style="margin-bottom: 100px; margin-top: 100px; position: ;">
+<div class="container" style="margin-bottom: 100px; margin-top: 100px; position: fixed;">
   <div class="col-md-10">
     <div class="card-column">
       <div class="card border-primary mb-3">
@@ -22,7 +22,7 @@
         <div class="card-header bg-dark"><a  class="text-light" [routerLink]="['/events']">Upcoming Events</a></div>
         <div class="card-body">
             <ul *ngFor="let e of upComingEvents; let i=index" class="list">
-                <li><a class="text-dark" [routerLink]="['/blogs', e.eventId]">{{e.title}}</a></li>
+                <li><a class="text-dark" [href]="['/events/'+ e.eventId]">{{e.name}}</a></li>
             </ul>
         </div>
       </div>
@@ -30,8 +30,8 @@
       <div class="card border-dark mb-3">
         <div class="card-header bg-dark"><a  class="text-light" [routerLink]="['/events']">Past Events</a></div>
         <div class="card-body">
-            <ul *ngFor="let e of upComingEvents; let i=index" class="list">
-                <li><a class="text-dark" [routerLink]="['/blogs', e.eventId]">{{e.title}}</a></li>
+            <ul *ngFor="let e of pastEvents; let i=index" class="list">
+                <li><a class="text-dark" [href]="['/events/'+ e.eventId]">{{e.name}}</a></li>
             </ul>
         </div>
       </div>
