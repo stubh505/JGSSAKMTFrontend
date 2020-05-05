@@ -1,1 +1,42 @@
-<p>home works!</p>
+<div class="container-fluid" style="margin-top: 10%; margin-bottom: 10%;">
+    <div class="row">
+        <div class="col-md-11 offset-md-1">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleSlidesOnly"  *ngFor="let item of carousels;let index = index" [attr.data-slide-to]="index"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item" *ngFor="let item of carousels;let index = index;let isFirst = first" [ngClass]="{active:isFirst}">
+                    <img [src]="item.image" class="d-block w-100 rounded" [alt]="item.label">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 *ngIf="item.label">{{item.label}}</h5>
+                        <p *ngIf="item.body">{{item.body}}</p>
+                    </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleSlidesOnly" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleSlidesOnly" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid offset-md-1">
+        <div class="container" style="text-align: center;">
+          <h1 class="display-4">Joy Thakur</h1>
+          <p class="lead">Welcome to the official Website of <b>Joyguru Sri Sri Ashok Kumar Mukhopadhyay Sevakendra Trust</b>, which is a Charitable Religious
+            Trust, donations under which are exempted under Section 80G of Indian Income Tax Act.</p>
+        </div>
+      </div>
+    <div class="row" style="margin-top: 2%; text-align: justify;" *ngFor="let b of page.paragraphs;let i=index">
+        <div class="col-md-11 offset-md-1">
+            <!-- <h4>{{b.header}}</h4> -->
+            <img [src]="b.imgUrl" *ngIf="b.imgUrl" class="img img-fluid rounded" style="width: 100%; margin-top: 2%; margin-bottom: 2%;">
+            <div [innerHTML]="b.body"></div>
+        </div>
+    </div>
+</div>
