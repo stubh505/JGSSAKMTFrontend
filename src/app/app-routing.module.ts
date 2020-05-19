@@ -15,6 +15,7 @@ const routes: Routes = [
   { path : 'blogs', component : BlogsComponent },
   { path : 'blogs/:id', component : ViewBlogComponent },
   { path : 'events', component : EventsComponent },
+  { path : 'events/:id', component : ViewEventComponent },
   { path : 'contactus', component : ContactusComponent},
   { path : 'events/:id', component : ViewEventComponent },
   { path: '', component : HomeComponent },
