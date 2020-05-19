@@ -21,7 +21,7 @@ export class EventsService {
         return this.http.get<Events[]>(environment.eventsapi+"getPastEvents");
     }
 
-    viewUpcoming():Observable<Events[]>{
+    viewUpcoming():Observable<Events[]>{ 
         return this.http.get<Events[]>(environment.eventsapi+"getUpComingEvents");
     }
 }

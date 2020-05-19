@@ -11,7 +11,7 @@ export class BlogsService {
 
     viewAll():Observable<Blogs[]>{
         return this.http.get<Blogs[]>(environment.blogsapi+"getAllBlogs");
-    }
+    } 
 
     view(b:number):Observable<Blogs>{
       return this.http.get<Blogs>(environment.blogsapi+"getBlog/"+b);

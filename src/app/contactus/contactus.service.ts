@@ -5,7 +5,7 @@ import { catchError } from 'rxjs/operators';
 import { ContactUs } from '../models/contactus';
 import { environment } from 'src/environments/environment';
 
-@Injectable()
+@Injectable() 
 export class ContactUsService {
 
   constructor(private http:HttpClient) { }

@@ -20,6 +20,8 @@ import { SidePanelComponent } from './side-panel/side-panel.component';
 import { EventsService } from './events/events.service';
 import { EventDatePipe } from './pipe.date';
 import { ViewEventComponent } from './view-event/view-event.component';
+import { CarouselService } from './home/carousel.service';
+import { HomeService } from './home/home.service';
 
 @NgModule({
   declarations: [
@@ -33,8 +35,8 @@ import { ViewEventComponent } from './view-event/view-event.component';
     ContactusComponent,
     ViewBlogComponent,
     SidePanelComponent,
-    EventDatePipe,
-    ViewEventComponent
+    ViewEventComponent,
+    EventDatePipe
   ],
   imports: [
     BrowserModule,
@@ -49,6 +51,8 @@ import { ViewEventComponent } from './view-event/view-event.component';
     AboutService,
     BlogsService,
     EventsService,
+    CarouselService,
+    HomeService,
     Title
   ],
   bootstrap: [AppComponent]

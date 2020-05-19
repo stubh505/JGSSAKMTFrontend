@@ -17,7 +17,7 @@ const routes: Routes = [
   { path : 'events', component : EventsComponent },
   { path : 'events/:id', component : ViewEventComponent },
   { path : 'contactus', component : ContactusComponent},
-
+  { path : 'events/:id', component : ViewEventComponent },
   { path: '', component : HomeComponent },
   { path: "**", redirectTo : "", pathMatch : 'full' }
 ];

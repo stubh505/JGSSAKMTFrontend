@@ -33,4 +33,3 @@ errorMessage:string;
     this.router.navigate(['/','events',eId])
   }
 }
-

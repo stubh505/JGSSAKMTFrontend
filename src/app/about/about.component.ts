@@ -20,7 +20,7 @@ export class AboutComponent implements OnInit {
     this.view();
   }
 
-  view() {
+  view() { 
     this.service.view().subscribe(
       (response)=>{ this.about=response },
       (error)=>{ this.errorMessage=error.error.message }

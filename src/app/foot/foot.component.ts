@@ -9,7 +9,7 @@ export class FootComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { 
   }
 
 }
