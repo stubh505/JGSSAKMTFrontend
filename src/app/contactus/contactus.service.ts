@@ -10,8 +10,8 @@ export class ContactUsService {
 
   constructor(private http:HttpClient) { }
 
-  contactUs(data: ContactUs):Observable<ContactUs> {
-    return this.http.post<ContactUs>(environment.contactapi+"contactUs", data);
+  contactUs(data: ContactUs):Observable<number> {
+    return this.http.post<number>(environment.contactapi+"contactUs", data);
   }
 
   private errorHandler(err:any){
