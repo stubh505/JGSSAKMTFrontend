@@ -1,12 +1,14 @@
-<div class="row container-fluid" style="margin-top: 10%; padding-left: 50px; text-align: justify;"> 
-    <h2 class="col-md-10 offset-md-1">{{about.header}}</h2>
-</div>
-<div style="margin-bottom: 100px;">
-<div class="row container-fluid" style="padding-left: 50px; text-align: justify;" *ngFor="let b of about.paragraphs;let i=index">
-    <div class="col-md-10 offset-md-1">
-        <h4>{{b.header}}</h4>
-        <img [src]="b.imgUrl" *ngIf="b.imgUrl" class="img img-fluid rounded" style="width: 100%; margin-top: 20px; margin-bottom: 20px;">
-        <div [innerHTML]="b.body"></div>
+<div class="container-fluid">
+    <div class="row" style="margin-top: 10%; padding-left: 50px; text-align: justify;"> 
+        <h2 class="col-md-10 offset-md-1">{{about.header}}</h2>
     </div>
-</div>
+    <div style="margin-bottom: 100px;">
+    <div class="row container-fluid" style="padding-left: 50px; text-align: justify;" *ngFor="let b of about.paragraphs;let i=index">
+        <div class="col-md-10 offset-md-1">
+            <h4>{{b.header}}</h4>
+            <img [src]="b.imgUrl" *ngIf="b.imgUrl" class="img img-fluid rounded" style="width: 100%; margin-top: 20px; margin-bottom: 20px;">
+            <div [innerHTML]="b.body"></div>
+        </div>
+    </div>
+    </div>
 </div>

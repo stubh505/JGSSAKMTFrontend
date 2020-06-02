@@ -36,10 +36,12 @@ export class ContactusComponent implements OnInit {
     this.errorMessage=null;
     this.successMessage=null;
     this.service.contactUs(this.contactUsForm.value).subscribe(
-      response=>{this.successMessage=response},
+      response=>{
+        this.successMessage=response
+        this.contactUsForm.reset();
+      },
       error=>{this.errorMessage=error.error.message}
     );
-    this.contactUsForm.reset();
   }
 
 }
