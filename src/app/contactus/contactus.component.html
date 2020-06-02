@@ -35,11 +35,11 @@
               Send Message
             </button>
           </form>
-  
-          <div *ngIf="errorMessage!=null">
+          <br>
+          <div *ngIf="errorMessage!=null"  class="alert alert-danger" role="alert">
             <span class="text-danger">{{errorMessage}}</span>
           </div>
-          <div *ngIf="successMessage!=null">
+          <div *ngIf="successMessage!=null"  class="alert alert-success" role="alert">
             <span class="text-success">Message sent successfully</span>
           </div>
         </div>
