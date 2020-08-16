@@ -35,8 +35,19 @@ export class SidePanelComponent implements OnInit {
     );
   }
 
-  blogsClicked(bId) {
-    this.route.navigate(['/','blogs',bId])
+  blogsClicked(id) {
+    this.route.routeReuseStrategy.shouldReuseRoute = function () {
+      return false;
+    }
+    this.route.onSameUrlNavigation = 'reload';
+    this.route.navigate(['/blogs', id])
   }
 
+  eventsClicked(id) {
+    this.route.routeReuseStrategy.shouldReuseRoute = function () {
+      return false;
+    }
+    this.route.onSameUrlNavigation = 'reload';
+    this.route.navigate(['/events', id])
+  }
 }

@@ -2,13 +2,15 @@
     <div class="row">
         <jgssakmt-nav></jgssakmt-nav>
     </div>
-    <div class="row">
-    <div class="col-md-8">
-        <router-outlet></router-outlet>
-    </div>
-    <div class="col-md-4">
-        <app-side-panel></app-side-panel>
-    </div>
+    <div class="row mb-5 mt-5">
+        <div class="col-md-8">
+            <router-outlet></router-outlet>
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="sticky-bar">
+                <app-side-panel></app-side-panel>
+            </div>
+        </div>
     </div>
     <div class="row">
         <jgssakmt-foot></jgssakmt-foot>

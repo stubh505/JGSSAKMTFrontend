@@ -1,0 +1,6 @@
+.sticky-bar{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 10%;
+    bottom: 12%;
+}
